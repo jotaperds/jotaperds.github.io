@@ -1,0 +1,44 @@
+body {
+  margin: 0px;
+  font-family: "Fira Sans", Arial, sans-serif;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto; /*deposi de definido os valores de width e height no html, a altura fica como o valor fixo e começa a comprimir a imagem. Assim mantem a razão da imagem e não a distorce*/
+  display: block;
+}
+.subtitulo {
+  text-transform: uppercase;
+  font-size: 8.75rem;
+  line-height: 1.2;
+  font-weight: bold;
+  word-break: break-all;
+  max-width: 46ch;
+}
+@media (max-width: 1000px) {
+  .subtitulo {
+    font-size: 7rem;
+    max-width: 4ch;
+  }
+}
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    max-width: initial !important; /* o "!" prioriza escrevendo sempre por cima de qualquer valor que vier na frente */
+  }
+}

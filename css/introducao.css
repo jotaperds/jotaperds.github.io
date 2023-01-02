@@ -1,0 +1,67 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 140px;
+  align-items: center;
+}
+.introducao h1 {
+  font-size: 4.5rem; /*valor da tipografia*/
+  line-height: 1.125; /*valor usado para multiplicar AUTOMATICAMENTE a altura de linha da tipografia*/
+  margin-bottom: 30px;
+  position: relative; /*O elemento é posicionado em relação a si mesmo*/
+}
+.introducao p {
+  font-size: 1.5rem;
+  color: #4d4d4d;
+}
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../img/detalhe.svg) no-repeat center;
+  position: absolute; /*Um elemento com position: absolute tem sua posição relacionada a de seu elemento pai.*/
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+@media (max-width: 1000px) {
+  .introducao {
+    gap: 100px;
+  }
+  .introducao h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .introducao {
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .introducao h1::before {
+    height: 15px;
+    width: 30px;
+    left: 0px;
+  }
+  .introducao p {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 500px) {
+  .introducao {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .introducao img {
+    display: none;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+}

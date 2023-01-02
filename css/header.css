@@ -1,0 +1,38 @@
+.header {
+  padding: 40px 20px; /*40px para cima e para baixo | 20px para direita e esquerda*/
+  display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+  justify-content: space-between; /*deu um espaçamento entre a logo e o menu*/
+  align-items: center; /*colocou a logo e o menu alinhados ao centro (no meio).*/
+  margin: 0 auto; /*faz com que quando aumente a tela, os itens sempre se mantenham ao centro ao invés de deixar um espaço em banco à direita (0 cima e baixo| AUTO esquerda e direita)*/
+  max-width: 1200px; /*define o tamnho máximo em pixels do conteúdo na tela*/
+}
+.header-menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /*define se os itens podem ir para a linha de baixo ou não ao diminuir a tela*/
+  justify-content: center; /*quando diminui a tela, os itens vão se alinhado ao centro um a baixo do outro*/
+}
+.header-menu a {
+  font-size: 1.125rem;
+  color: #141414;
+  text-decoration: none; /*tira a linha sublinhada de um link*/
+  font-family: "Fira sans", Arial, sans-serif;
+  padding: 10px 20px; /*primeira propriedade: cima baixo | segunda propriedade: esquerda direita*/
+  display: block; /*gera quebras de linha antes e depois do elemento quando no fluxo normal*/
+}
+
+@media (max-width: 600px) {
+  .header {
+    /*display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;*/
+    flex-direction: column; /*substitui os itens acima colocando todos os itens em apenas uma coluna*/
+    gap: 40px;
+    padding: 20px; /*padding para diminuir o espaço quando se diminui a tela nessa nova propriedade de pixels*/
+    margin-bottom: auto;
+  }
+  header a {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+}
